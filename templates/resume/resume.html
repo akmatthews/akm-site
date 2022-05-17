@@ -1,0 +1,107 @@
+{% load home_extras %}
+<!-- RESUME -->
+<div class="iknow_tm_animate_section" id="resume">
+    <div class="section_inner">
+        <div class="iknow_tm_resume">
+            <div class="iknow_tm_main_title">
+                <span>Resume</span>
+                <h3>Combination of Skill &amp; Experience</h3>
+            </div>
+            <div class="resume_inner">
+                <div class="left">
+                    <div class="info_list">
+                        <div class="iknow_tm_resume_title">
+                            <h3>Education</h3>
+                            <span class="shape"></span>
+                        </div>
+                        <ul>
+                            {% for edu in resume.education %}
+                                <li>
+                                    <div class="list_inner">
+                                        <div class="short">
+                                            <div class="job">
+                                                <h3>{{ edu.degree }}</h3>
+                                                <span>{{ edu.university }}</span>
+                                            </div>
+                                            <div class="year">
+                                                <span>{{ edu.start_date|date:'Y' }} - {{ edu.end_date|date:'Y' }} </span>
+                                            </div>
+                                        </div>
+                                        <div class="text">
+                                            <p>{{ edu.description }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="info_list">
+                        <div class="iknow_tm_resume_title">
+                            <h3>Experience</h3>
+                            <span class="shape"></span>
+                        </div>
+                        <ul>
+                            {% for exp in resume.experience %}
+                                <li>
+                                    <div class="list_inner">
+                                        <div class="short">
+                                            <div class="job">
+                                                <h3>{{ exp.title }}</h3>
+                                                <span>{{ exp.company }}</span>
+                                            </div>
+                                            <div class="year">
+                                                <span>{{ exp.start_date|date:'Y' }} - {{ exp.end_date|date:'Y' }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="text">
+                                            <p>{{ exp.description }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="skills_list">
+                        <div class="iknow_tm_resume_title">
+                            <h3>Personal Skills</h3>
+                            <span class="shape"></span>
+                        </div>
+                        <div class="personal">
+                            <div class="dodo_progress">
+                                {% for skill in resume.personal_skills %}
+                                    <div class="progress_inner" data-value="{{ skill.percentage_as_int }}">
+                                        <span><span class="label">{{ skill.skill }}</span><span class="number">{{ skill.percentage_as_int }}%</span></span>
+                                        <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills_list">
+                        <div class="iknow_tm_resume_title">
+                            <h3>Software Skills</h3>
+                            <span class="shape"></span>
+                        </div>
+                        <div class="software">
+                            <div class="circular_progress_bar">
+                                <ul>
+                                    {% for skill in resume.software_skills %}
+                                        <li>
+                                            <div class="list_inner">
+                                                <div class="myCircle" data-value="{{ skill.percentage }}"></div>
+                                                <div class="title"><h3>{{ skill.skill }}</h3></div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /RESUME -->

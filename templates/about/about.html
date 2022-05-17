@@ -1,0 +1,61 @@
+{% load static %}
+
+<!-- ABOUT -->
+<div class="iknow_tm_animate_section" id="about">
+    <div class="section_inner">
+        <div class="iknow_tm_about">
+            <div class="left">
+                <div class="left_inner">
+                    <div class="image">
+                        <img src="{% static 'images/thumbs/35-44.jpg' %}" alt="" />
+                        <div class="main" data-img-url="{% static 'images/hero/7.jpg' %}"></div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <h3>Name</h3>
+                                <span>{{ about.first_name }} {{ about.last_name }}</span>
+                            </li>
+                            <li>
+                                <h3>Birthday</h3>
+                                <span>{{ about.birth_date }}</span>
+                            </li>
+                            <li>
+                                <h3>Mail</h3>
+                                <span>{{ about.email }}</span>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>{{ about.phone }}</span>
+                            </li>
+                            <li>
+                                <h3>Address</h3>
+                                <span>{{ about.address }}</span>
+                            </li>
+                            <!-- <li>
+                                <h3>Nationality</h3>
+                                <span>Bangladeshi</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="iknow_tm_main_title">
+                    <span>About Me</span>
+                    <h3>{{ about.title }}</h3>
+                </div>
+                <div class="bigger_text">
+                    <p>{{ about.subtitle }}</p>
+                </div>
+                <div class="text">
+                    <p>{{ about.description }}</p>
+                </div>
+                <div class="iknow_tm_button">
+                    <a href="#" download>Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ABOUT -->

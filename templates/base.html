@@ -1,0 +1,238 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>{{ content.about.first_name }} {{ content.about.last_name }} | Home</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/plugins.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/dark.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<!--<link rel="stylesheet" type="text/css" href="css/dark.css" />-->
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
+</head>
+
+<body> 
+	
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+<!-- WRAPPER ALL -->
+<!--<div class="iknow_tm_all_wrap" data-magic-cursor="show" data-animation-in="rotateInDownLeft" data-animation-out="rotateOutDownLeft"> -->
+<div class="iknow_tm_all_wrap" data-magic-cursor="show" data-enter="zoomIn" data-exit="zoomOut">
+<!-- If you want disable magic cursor change value to "hide" -->	
+	
+	<!-- MODALBOX -->
+	<div class="iknow_tm_modalbox">
+		<div class="box_inner">
+			<div class="close">
+				<a href="#"><img class="svg" src="{% static 'images/svg/cancel.svg' %}" alt="" /></a>
+			</div>
+			<div class="description_wrap"></div>
+		</div>
+	</div>
+	<!-- /MODALBOX -->
+	
+	<!-- MOBILE MENU -->
+	<div class="iknow_tm_mobile_menu">
+		<div class="mobile_menu_inner">
+			<div class="mobile_in">
+				<!-- <div class="logo">
+					<a href="#"><img src="{% static 'images/logo/dark.png' %}" alt="" /></a>
+				</div> -->
+				<div class="trigger">
+					<div class="hamburger hamburger--slider">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown">
+			<div class="dropdown_inner">
+				<ul class="transition_link">
+					<li class="current"><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<!-- <li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#testimonials">Testimonial</a></li>
+					<li><a href="#news">Blog</a></li>
+					<li><a href="#contact">Contact</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /MOBILE MENU -->
+	
+	<!-- SIDEBAR -->
+	<div class="iknow_tm_sidebar_2">
+		<div class="sidebar_inner">
+			<!-- <div class="logo">
+				<a href="#"><img src="{% static 'images/logo/dark.png' %}" alt="" /></a>
+			</div> -->
+			<div class="menu transition_link">
+				<ul>
+					<li class="active">
+						<img class="svg" src="{% static 'images/svg/squares.svg' %}" alt="" />
+						<span>Home</span>
+						<a class="iknow_tm_full_link" href="#home"></a>
+					</li>
+					<li>
+						<img class="svg" src="{% static 'images/svg/archive.svg' %}" alt="" />
+						<span>About Me</span>
+						<a class="iknow_tm_full_link" href="#about"></a>
+					</li>
+					<li>
+						<img class="svg" src="{% static 'images/svg/contacs.svg' %}" alt="" />
+						<span>Resume</span>
+						<a class="iknow_tm_full_link" href="#resume"></a>
+					</li>
+					<!-- <li>
+						<img class="svg" src="images/svg/briefcase.svg" alt="" />
+						<span>Portfolio</span>
+						<a class="iknow_tm_full_link" href="#portfolio"></a>
+					</li>
+					<li>
+						<img class="svg" src="images/svg/gear.svg" alt="" />
+						<span>Service</span>
+						<a class="iknow_tm_full_link" href="#service"></a>
+					</li>
+					<li>
+						<img class="svg" src="images/svg/message.svg" alt="" />
+						<span>Testimonial</span>
+						<a class="iknow_tm_full_link" href="#testimonials"></a>
+					</li>
+					<li>
+						<img class="svg" src="images/svg/writing.svg" alt="" />
+						<span>Blog</span>
+						<a class="iknow_tm_full_link" href="#news"></a>
+					</li>
+					<li>
+						<img class="svg" src="images/svg/letter.svg" alt="" />
+						<span>Contact</span>
+						<a class="iknow_tm_full_link" href="#contact"></a>
+					</li> -->
+					<span class="ccc"></span>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /SIDEBAR -->
+	
+	<!-- MAINPART -->
+	<div class="iknow_tm_fixed_mainpart">
+		<div class="mainpart_inner">
+		
+			<!-- Hero Shapes -->
+			<div class="simple_shapes">
+				<span class="one anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="two anim_moveLeft"><img class="svg" src="{% static 'images/svg/shapes/dot.svg' %}" alt="" /></span>
+				<span class="three anim_moveTop"><img class="svg" src="{% static 'images/svg/shapes/dot-2.svg' %}" alt="" /></span>
+				<span class="four anim_circle"><img class="svg" src="{% static 'images/svg/shapes/1.svg' %}" alt="" /></span>
+				<span class="five anim_circle"><img class="svg" src="{% static 'images/svg/shapes/8.svg' %}" alt="" /></span>
+				<span class="six anim_circle"><img class="svg" src="{% static 'images/svg/shapes/3.svg' %}" alt="" /></span>
+				<span class="seven anim_right"><img class="svg" src="{% static 'images/svg/shapes/4.svg' %}" alt="" /></span>
+				<span class="eight anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="nine anim_circle"><img class="svg" src="{% static 'images/svg/shapes/3.svg' %}" alt="" /></span>
+				<span class="ten anim_moveLeft"><img class="svg" src="{% static 'images/svg/shapes/4.svg' %}" alt="" /></span>
+				<span class="eleven anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="twelve anim_extra"><img class="svg" src="{% static 'images/svg/shapes/2.svg' %}" alt="" /></span>
+				<span class="thirteen anim_circle"><img class="svg" src="{% static 'images/svg/shapes/5.svg' %}" alt="" /></span>
+				<span class="fourteen anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="fifteen anim_circle"><img class="svg" src="{% static 'images/svg/shapes/3.svg' %}" alt="" /></span>
+				<span class="sixteen anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="seventeen anim_circle"><img class="svg" src="{% static 'images/svg/shapes/5.svg' %}" alt="" /></span>
+				<span class="eighteen anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="nineteen anim_scale"><img class="svg" src="{% static 'images/svg/shapes/9.svg' %}" alt="" /></span>
+				<span class="twenty anim_circle"><img class="svg" src="{% static 'images/svg/shapes/1.svg' %}" alt="" /></span>
+			</div>
+			<!-- /Hero Shapes -->
+		
+			<!-- TOPBAR -->
+			<div class="topbar_extra">
+				<div class="details">
+					<div class="social">
+						<ul>
+							<li><a href="{{ content.about.facebook_url }}" target="_blank"><img class="svg" src="{% static 'images/svg/social/facebook.svg' %}" alt="" /></a></li>
+							<li><a href="{{ content.about.twitter_url }}" target="_blank"><img class="svg" src="{% static 'images/svg/social/twitter.svg' %}" alt="" /></a></li>
+							<li><a href="{{ content.about.youtube_url }}" target="_blank"><img class="svg" src="{% static 'images/svg/social/youtube.svg' %}" alt="" /></a></li>
+							<li><a href="{{ content.about.instagram_url }}" target="_blank"><img class="svg" src="{% static 'images/svg/social/instagram.svg' %}" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="iknow_tm_button">
+						<a href="#" download>Download CV</a>
+					</div>
+				</div>
+			</div>
+			<!-- /TOPBAR -->
+			
+			<!-- CONTENT -->
+			<div class="iknow_tm_content_extra">
+                {% block content %}
+					<p>Placeholder text in base template. Replace with page  content.</p>
+                {% endblock content %}
+			</div>
+			
+			<!-- COPYRIGHT -->
+			<div class="extra_copyright">
+				<div class="iknow_tm_copyright">
+					<div class="inner">
+						<div class="left">
+							<p>Designed with love &copy; <a href="https://themeforest.net/user/marketify" target="_blank">Marketify</a></p>
+						</div>
+						<div class="right">
+							<ul>
+								<li><a href="#">Terms &amp; Condition</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /COPYRIGHT -->
+			
+		</div>
+	</div>
+	<!-- /MAINPART -->
+	
+	<!-- MAGIC CURSOR -->
+	<div class="mouse-cursor cursor-outer"></div>
+	<div class="mouse-cursor cursor-inner"></div>
+	<!-- /MAGIC CURSOR -->
+		
+</div>
+<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/init.js' %}"></script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>

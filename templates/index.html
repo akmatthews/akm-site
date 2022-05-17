@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'home.html' with about=content.about %}
+    {% include 'about/about.html' with about=content.about %}
+    {% include 'resume/resume.html' with resume=content.resume %}
+{% endblock content %}
+
